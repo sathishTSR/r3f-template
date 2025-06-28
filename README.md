@@ -1,1 +1,168 @@
 # r3f-template
+
+A CLI tool to scaffold React Three Fiber projects with or without physics (Rapier). Quickly bootstrap your 3D web applications with modern tooling and best practices.
+
+## 🚀 Features
+
+- **Interactive CLI**: Choose your project name and features
+- **Two Template Options**:
+  - **Basic Template**: React Three Fiber with essential 3D features
+  - **Physics Template**: Includes Rapier physics engine for realistic interactions
+- **Modern Stack**: Built with Vite, TypeScript, and ESLint
+- **Ready to Use**: Pre-configured with all necessary dependencies
+
+## 📦 Installation
+
+### Global Installation (Recommended)
+```bash
+npm install -g r3f-template
+```
+
+### Local Installation
+```bash
+npm install r3f-template
+npx r3f-template
+```
+
+## 🎯 Usage
+
+### Interactive Mode
+```bash
+r3f-template
+```
+
+The CLI will prompt you for:
+- **Project Name**: The name of your new project
+- **Physics**: Whether to include Rapier physics engine
+
+### Example Session
+```bash
+$ r3f-template
+? Enter your project name: my-3d-game
+? Include physics (rapier)? Yes
+✅ Project created in ./my-3d-game
+👉 Run 'cd my-3d-game && npm install && npm run dev'
+```
+
+## 📁 Template Structure
+
+### Basic Template
+```
+my-project/
+├── src/
+│   ├── Components/
+│   │   ├── Lights.tsx
+│   │   └── Suzanne.tsx
+│   ├── App.tsx
+│   ├── App.css
+│   ├── index.css
+│   └── main.tsx
+├── public/
+│   └── suzanne.glb
+├── package.json
+├── vite.config.ts
+├── tsconfig.json
+└── eslint.config.js
+```
+
+### Physics Template
+```
+my-project/
+├── src/
+│   ├── Components/
+│   │   ├── Lights.tsx
+│   │   ├── Player.tsx
+│   │   └── Suzanne.tsx
+│   ├── App.tsx
+│   ├── App.css
+│   ├── index.css
+│   └── main.tsx
+├── public/
+│   └── suzanne.gltf
+├── package.json
+├── vite.config.ts
+├── tsconfig.json
+└── eslint.config.js
+```
+
+## 🛠️ Dependencies
+
+### Basic Template
+- `@react-three/drei` - Useful helpers for React Three Fiber
+- `@react-three/fiber` - React renderer for Three.js
+- `react` & `react-dom` - React core
+- `three` - 3D library
+- `vite` - Build tool
+- `typescript` - Type safety
+- `eslint` - Code linting
+
+### Physics Template (Additional)
+- `@react-three/rapier` - Physics engine integration
+
+## 🎮 Getting Started
+
+After creating your project:
+
+```bash
+cd my-project
+npm install
+npm run dev
+```
+
+Your 3D application will be available at `http://localhost:5173`
+
+## 🎨 What's Included
+
+### Basic Template Features
+- **3D Scene Setup**: Pre-configured Canvas with proper lighting
+- **Suzanne Model**: Classic 3D model for testing
+- **TypeScript**: Full type safety
+- **Hot Reload**: Fast development with Vite
+- **ESLint**: Code quality and consistency
+
+### Physics Template Features
+- **Rapier Physics**: Realistic physics simulation
+- **Player Controller**: First-person movement with keyboard controls
+- **Collision Detection**: Proper physics bodies and colliders
+- **Interactive Environment**: Physics-enabled ground plane
+- **Pointer Lock**: Mouse look controls
+
+## 🎯 Use Cases
+
+- **3D Web Applications**: Interactive 3D experiences
+- **Games**: Browser-based 3D games
+- **Visualizations**: Data and scientific visualizations
+- **Prototypes**: Quick 3D concept validation
+- **Educational Projects**: Learning Three.js and React Three Fiber
+
+## 🔧 Customization
+
+Both templates are fully customizable:
+
+- **Add Models**: Replace or add 3D models in the `public/` directory
+- **Modify Components**: Edit components in `src/Components/`
+- **Extend Physics**: Add more physics bodies and interactions
+- **Styling**: Customize CSS in `src/App.css` and `src/index.css`
+
+## 📚 Resources
+
+- [React Three Fiber Documentation](https://docs.pmnd.rs/react-three-fiber)
+- [Three.js Documentation](https://threejs.org/docs/)
+- [Rapier Physics](https://rapier.rs/)
+- [Vite Documentation](https://vitejs.dev/)
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 👨‍💻 Author
+
+**Sathish** - [GitHub](https://github.com/sathishTSR)
+
+---
+
+Made with ❤️ for the React Three Fiber community
