@@ -1,6 +1,6 @@
 {
   "name": "r3f-template",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "bin": {
     "r3f-template": "./bin/index.js"
@@ -11,7 +11,18 @@
   ],
   "license": "MIT",
   "description": "CLI to scaffold React Three Fiber templates with or without physics( Rapier )",
-  "keywords": ["react-three-fiber", "cli", "template", "vite", "three", "rapier", "3d","react-three-fiber","@react-three/fiber","@react-three/drei"],
+  "keywords": [
+    "react-three-fiber",
+    "cli",
+    "template",
+    "vite",
+    "three",
+    "rapier",
+    "3d",
+    "react-three-fiber",
+    "@react-three/fiber",
+    "@react-three/drei"
+  ],
   "author": "Sathish",
   "dependencies": {
     "inquirer": "^9.2.8",
