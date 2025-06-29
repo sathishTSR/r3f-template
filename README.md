@@ -1,3 +1,5 @@
+[![npm version](https://img.shields.io/npm/v/r3f-template)](https://www.npmjs.com/package/r3f-template)
+
 # r3f-template
 
 A CLI tool to scaffold React Three Fiber projects with or without physics (Rapier). Quickly bootstrap your 3D web applications with modern tooling and best practices.
