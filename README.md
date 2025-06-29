@@ -72,6 +72,7 @@ my-project/
 │   ├── Components/
 │   │   ├── Lights.tsx
 │   │   ├── Player.tsx
+│   │   ├── Ground.tsx
 │   │   └── Suzanne.tsx
 │   ├── App.tsx
 │   ├── App.css
@@ -122,10 +123,22 @@ Your 3D application will be available at `http://localhost:5173`
 
 ### Physics Template Features
 - **Rapier Physics**: Realistic physics simulation
-- **Player Controller**: First-person movement with keyboard controls
+- **Player Controller**: First-person movement with keyboard controls (WASD/Arrow keys for movement, Space for jumping)
+- **Mouse Look**: Pointer lock controls for camera rotation
 - **Collision Detection**: Proper physics bodies and colliders
 - **Interactive Environment**: Physics-enabled ground plane
-- **Pointer Lock**: Mouse look controls
+- **Camera Follow**: Camera automatically follows the player position
+
+## 🎮 Controls (Physics Template)
+
+The physics template includes a fully functional player controller with controls already implemented:
+
+- **Movement**: Use WASD keys or Arrow keys to move
+- **Jump**: Press Spacebar to jump
+- **Mouse Look**: Click to lock mouse pointer and look around
+- **Exit Mouse Lock**: Press Escape to unlock mouse
+
+**Note**: All controls are pre-configured and ready to use - no additional setup required!
 
 ## 🎯 Use Cases
 

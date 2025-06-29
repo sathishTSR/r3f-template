@@ -21,7 +21,10 @@
     "3d",
     "react-three-fiber",
     "@react-three/fiber",
-    "@react-three/drei"
+    "@react-three/drei",
+    "r3f-template",
+    "react-three-fiber/template",
+    "three template"
   ],
   "author": "Sathish",
   "dependencies": {
