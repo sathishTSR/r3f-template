@@ -1,6 +1,6 @@
 {
   "name": "r3f-template",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "type": "module",
   "bin": {
     "r3f-template": "./bin/index.js"
