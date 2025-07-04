@@ -6,11 +6,14 @@ A CLI tool to scaffold React Three Fiber projects with or without physics (Rapie
 
 ## 🚀 Features
 
-- **Interactive CLI**: Choose your project name and features
+- **Interactive CLI**: Choose your project name, language, and features
+- **Language Support**: 
+  - **TypeScript**: Full type safety with TypeScript configuration
+  - **JavaScript**: Simple JavaScript setup for quick prototyping
 - **Two Template Options**:
   - **Basic Template**: React Three Fiber with essential 3D features
   - **Physics Template**: Includes Rapier physics engine for realistic interactions
-- **Modern Stack**: Built with Vite, TypeScript, and ESLint
+- **Modern Stack**: Built with Vite, ESLint, and modern tooling
 - **Ready to Use**: Pre-configured with all necessary dependencies
 
 ## 📦 Installation
@@ -35,20 +38,24 @@ r3f-template
 
 The CLI will prompt you for:
 - **Project Name**: The name of your new project
-- **Physics**: Whether to include Rapier physics engine
+- **Language**: Choose between TypeScript or JavaScript
+- **Template**: Choose between Basic or Physics (Rapier) template
 
 ### Example Session
 ```bash
 $ r3f-template
 ? Enter your project name: my-3d-game
-? Include physics (rapier)? Yes
+? Choose your language: TypeScript
+? Choose your template: Physics (Rapier)
 ✅ Project created in ./my-3d-game
-👉 Run 'cd my-3d-game && npm install && npm run dev'
+👉 Run 'cd my-3d-game'
+👉 Run 'npm install'
+👉 Run 'npm run dev'
 ```
 
 ## 📁 Template Structure
 
-### Basic Template
+### Basic Template (TypeScript)
 ```
 my-project/
 ├── src/
@@ -58,16 +65,37 @@ my-project/
 │   ├── App.tsx
 │   ├── App.css
 │   ├── index.css
-│   └── main.tsx
+│   ├── main.tsx
+│   └── vite-env.d.ts
 ├── public/
 │   └── suzanne.glb
 ├── package.json
 ├── vite.config.ts
 ├── tsconfig.json
+├── tsconfig.app.json
+├── tsconfig.node.json
 └── eslint.config.js
 ```
 
-### Physics Template
+### Basic Template (JavaScript)
+```
+my-project/
+├── src/
+│   ├── Components/
+│   │   ├── Lights.jsx
+│   │   └── Suzanne.jsx
+│   ├── App.jsx
+│   ├── App.css
+│   ├── index.css
+│   └── main.jsx
+├── public/
+│   └── suzanne.glb
+├── package.json
+├── vite.config.js
+└── eslint.config.js
+```
+
+### Physics Template (TypeScript)
 ```
 my-project/
 ├── src/
@@ -79,12 +107,35 @@ my-project/
 │   ├── App.tsx
 │   ├── App.css
 │   ├── index.css
-│   └── main.tsx
+│   ├── main.tsx
+│   └── vite-env.d.ts
 ├── public/
 │   └── suzanne.gltf
 ├── package.json
 ├── vite.config.ts
 ├── tsconfig.json
+├── tsconfig.app.json
+├── tsconfig.node.json
+└── eslint.config.js
+```
+
+### Physics Template (JavaScript)
+```
+my-project/
+├── src/
+│   ├── Components/
+│   │   ├── Lights.jsx
+│   │   ├── Player.jsx
+│   │   ├── Ground.jsx
+│   │   └── Suzanne.jsx
+│   ├── App.jsx
+│   ├── App.css
+│   ├── index.css
+│   └── main.jsx
+├── public/
+│   └── suzanne.gltf
+├── package.json
+├── vite.config.js
 └── eslint.config.js
 ```
 
@@ -96,8 +147,8 @@ my-project/
 - `react` & `react-dom` - React core
 - `three` - 3D library
 - `vite` - Build tool
-- `typescript` - Type safety
 - `eslint` - Code linting
+- `typescript` (TypeScript template only) - Type safety
 
 ### Physics Template (Additional)
 - `@react-three/rapier` - Physics engine integration
@@ -119,7 +170,7 @@ Your 3D application will be available at `http://localhost:5173`
 ### Basic Template Features
 - **3D Scene Setup**: Pre-configured Canvas with proper lighting
 - **Suzanne Model**: Classic 3D model for testing
-- **TypeScript**: Full type safety
+- **TypeScript Support**: Full type safety (TypeScript template)
 - **Hot Reload**: Fast development with Vite
 - **ESLint**: Code quality and consistency
 
