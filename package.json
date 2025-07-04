@@ -24,7 +24,19 @@
     "@react-three/drei",
     "r3f-template",
     "react-three-fiber/template",
-    "three template"
+    "three template",
+    "react",
+    "react template",
+    "react three js",
+    "react three fiber",
+    "threejs",
+    "three.js",
+    "vite template",
+    "vite react",
+    "vite threejs",
+    "vite three.js",
+    "rapier physics",
+    "physics engine"
   ],
   "author": "Sathish",
   "dependencies": {

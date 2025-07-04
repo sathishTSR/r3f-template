@@ -7,7 +7,7 @@ import { fileURLToPath } from 'url'
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 const run = async () => {
-  const { projectName, withPhysics } = await inquirer.prompt([
+  const { projectName, language, template } = await inquirer.prompt([
     {
       name: 'projectName',
       type: 'input',
@@ -15,20 +15,36 @@ const run = async () => {
       validate: input => !!input || 'Project name is required.',
     },
     {
-      name: 'withPhysics',
-      type: 'confirm',
-      message: 'Include physics (rapier)?',
-      default: false,
+      name: 'language',
+      type: 'list',
+      message: 'Choose your language:',
+      choices: [
+        { name: 'TypeScript', value: 'ts' },
+        { name: 'JavaScript', value: 'js' }
+      ],
+      default: 'ts',
+    },
+    {
+      name: 'template',
+      type: 'list',
+      message: 'Choose your template:',
+      choices: [
+        { name: 'Basics', value: 'basic' },
+        { name: 'Physics (Rapier)', value: 'physics' }
+      ],
+      default: 'basic',
     },
   ])
 
-  const templatePath = path.resolve(__dirname, `../templates/${withPhysics ? 'physics' : 'basic'}`)
+  const templatePath = path.resolve(__dirname, `../templates/${language}/${template}`)
   const targetPath = path.resolve(process.cwd(), projectName)
 
   await fs.copy(templatePath, targetPath)
 
   console.log(`✅ Project created in ./${projectName}`)
-  console.log(`👉 Run 'cd ${projectName} && npm install && npm run dev'`)
+  console.log(`👉 Run 'cd ${projectName}'`)
+  console.log(`👉 Run 'npm install'`)
+  console.log(`👉 Run 'npm run dev'`)
 }
 
 run()

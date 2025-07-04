@@ -6,12 +6,12 @@ import { Vector3 } from "three";
 import { useThree } from "@react-three/fiber";
 
 const Player = () => {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const body = useRef<any>(null);
-  const direction = new Vector3();
-  const { camera } = useThree();
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const [, get] = useKeyboardControls<any>();
+   // eslint-disable-next-line @typescript-eslint/no-explicit-any
+   const body = useRef<any>(null);
+   const direction : Vector3 = new Vector3();
+   const { camera } = useThree();
+   // eslint-disable-next-line @typescript-eslint/no-explicit-any
+   const [, get] = useKeyboardControls<any>();
 
   useFrame(() => {
     const rb = body.current;
@@ -51,7 +51,7 @@ const Player = () => {
     <RigidBody
       ref={body}
       type="dynamic"
-      position={[0, 2, 0]}
+      position={[0, 2, 2]}
       colliders="hull"
       friction={1}
       canSleep={false}
